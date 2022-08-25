@@ -1,1 +1,4 @@
 # PetitTools
+
+## chromedriverDownloader.py
+OSの判定からchromeのバージョン検出chromedriverのダウンロードまでを一括して行います
