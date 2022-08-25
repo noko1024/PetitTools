@@ -26,7 +26,7 @@ def get_chrome_version_darwin() -> str:
     return version
 
 
-def seleniumDownload(OS="mac64",version="104"):
+def seleniumDownload(OS,version):
     
     #クロームのバージョンに応じたseleniumの最新バージョンを取得
     seleniumVer = requests.get(f"https://chromedriver.storage.googleapis.com/LATEST_RELEASE_{version}").text
@@ -46,8 +46,6 @@ def seleniumDownload(OS="mac64",version="104"):
     #解凍して書き込み
     with zipfile.ZipFile(f) as z:
         z.extractall(os.path.join(base_path,"lib"))
-    
-seleniumDownload()
 
 def main():
 
